@@ -18,7 +18,10 @@ public class BMIcalculator {
 		cBmIcalculator.AskforWeight();
 		System.out.println(cBmIcalculator.weight + " " + cBmIcalculator.height);
 		
-		//
+		// JH: displayer BMI and interpret of BMI
+		float bmi = cBmIcalculator.calculateBMI(cBmIcalculator.weight, cBmIcalculator.height);
+	    System.out.println("Your BMI is: " + bmi);
+	    interpretBMI(bmi);
 	}
 	
 	
