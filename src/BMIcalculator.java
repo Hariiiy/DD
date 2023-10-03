@@ -7,6 +7,21 @@ public class BMIcalculator {
 	public float height = 0f;
 	public Scanner sc = new Scanner(System.in);
 
+	
+	
+	
+	public static void main(String args[]) {
+
+		// SL:following only for testing purposes right now, feel free to comment out
+		BMIcalculator cBmIcalculator = new BMIcalculator();
+		cBmIcalculator.AskforHeight();
+		cBmIcalculator.AskforWeight();
+		System.out.println(cBmIcalculator.weight + " " + cBmIcalculator.height);
+		
+		//
+	}
+	
+	
 	// SL:take in the number, set the limitations
 	// it will be a good idea to merge the 2, but they have different limitations
 	public void AskforWeight() {
@@ -31,17 +46,25 @@ public class BMIcalculator {
 		}
 
 	}
-
+	
+	//HH: Calculate BMI
+	public float calculateBMI(float weight, float height) {
+        return weight / (height * height);
+    }
+	
+	//HH: Display a recommendation base on BMI
+	public static void interpretBMI(double bmi) {
+        if (bmi < 18.5) {
+            System.out.println("You are underweight.");
+        } else if (bmi >= 18.5 && bmi < 24.9) {
+            System.out.println("Your weight in normal range.");
+        } else if (bmi >= 25 && bmi < 29.9) {
+            System.out.println("You are overweight(pre-obese).");
+        } else {
+            System.out.println("You are obese.");
+        }
+    }
+ 
 }
 
-class Program {
-	public static void main(String args[]) {
-		// System.out.print("Hello world");
 
-		// SL:following only for testing purposes right now, feel free to comment out
-		BMIcalculator cBmIcalculator = new BMIcalculator();
-		cBmIcalculator.AskforHeight();
-		cBmIcalculator.AskforWeight();
-		System.out.println(cBmIcalculator.weight + " " + cBmIcalculator.height);
-	}
-}
