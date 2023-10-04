@@ -32,7 +32,7 @@ public class BMIcalculator {
 		weight = sc.nextFloat();
 
 		while (weight > 300 || weight < 10) {
-			System.out.println("Number is too large or small, please re-enter");
+			System.out.println("The weight should between 10 and 300, please re-enter");
 			weight = sc.nextFloat();
 		}
 
@@ -44,7 +44,7 @@ public class BMIcalculator {
 		height = sc.nextFloat();
 
 		while (height > 2.2 || height < 0.2) {
-			System.out.println("Number is too large or small, please re-enter");
+			System.out.println("The height should between 0.2 and 2.2, please re-enter");
 			height = sc.nextFloat();
 		}
 
